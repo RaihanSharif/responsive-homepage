@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 10px;
+}
+
+header {
+  background-color: bisque;
+}
+
+main {
+  background-color: burlywood;
+}
+
+footer {
+  background-color: cadetblue;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+.profile-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+header img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+header h1 {
+  transform: translateY(-100%);
+  text-align: center;
+
+  padding: 0.5rem;
+  color: rgb(191, 174, 174);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
