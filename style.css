@@ -7,19 +7,21 @@
 }
 
 body {
-  background-color: aliceblue;
+  background-color: rgb(142, 44, 132);
   font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  padding: 10px;
+}
+body > * {
+  margin: 70px;
 }
 
 header {
-  background-color: bisque;
+  /* background-color: bisque; */
 }
 
 main {
-  background-color: burlywood;
+  background-color: rgb(136, 127, 114);
 }
 
 footer {
@@ -33,24 +35,54 @@ h3 {
 }
 
 .profile-card {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  /* padding: 10px; */
+  /* background-color: aqua; */
+  grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 10px;
 }
 
-header img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+#profile-text {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
 }
 
-header h1 {
-  transform: translateY(-100%);
-  text-align: center;
+#profile-text p {
+  font-size: 1.1rem;
+}
+#profile-icons {
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
 
-  padding: 0.5rem;
-  color: rgb(191, 174, 174);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+#profile-img {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  background-image: url("https://placehold.co/400x400");
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+.icon {
+  text-decoration: none;
+}
+
+/* TODO: stop icons having click color/underline */
+.icon::after {
+  text-decoration: none;
 }
