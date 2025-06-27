@@ -10,31 +10,27 @@
 }
 
 body {
-  background-color: rgb(142, 44, 132);
   font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  /* max-width: 1440px; */
-  margin: 0 auto;
 }
 
 header {
-  background-color: bisque;
-}
-
-main {
-  background-color: rgb(136, 127, 114);
+  background-image: url("tilt-inkscape.svg");
+  background-position: top;
+  background-size: contain;
 }
 
 footer {
-  background-color: rgb(35, 186, 191);
+  background-color: #0a94b2;
 }
 
 h1,
 h2,
 h3 {
   font-family: "Playfair Display", serif;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 p {
@@ -43,8 +39,6 @@ p {
 
 .profile-card {
   display: grid;
-  /* padding: 10px; */
-  /* background-color: aqua; */
   grid-template-columns: auto 1fr;
   align-items: center;
 }
@@ -55,15 +49,21 @@ p {
   flex-direction: column;
   gap: 1rem;
   padding: 2rem;
-  box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75); */
+  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
 }
 
 #profile-text p {
   font-size: 1.1rem;
 }
+
 #profile-icons {
+  text-align: right;
+}
+#profile-icons > .icon {
   font-size: 2rem;
   margin-top: 1rem;
   text-align: right;
@@ -73,21 +73,30 @@ p {
   display: flex;
   min-width: 400px;
   min-height: 400px;
-  background-image: url("https://placehold.co/400x400");
+  background-image: url("profile.jpg");
   background-size: cover;
   background-position: center;
   justify-content: center;
   align-items: flex-end;
-  box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75); */
+  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
   z-index: 1;
   padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+#profile-name {
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
 }
 
 .icon {
   text-decoration: none;
   margin: 0 0.5rem;
+  font-size: 1.5rem;
 }
 
 /* TODO: stop icons having click color/underline */
@@ -96,7 +105,7 @@ p {
 }
 
 .project-card {
-  background-color: lightyellow;
+  background-color: white;
   display: flex;
   flex-direction: column;
   box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.75);
@@ -105,13 +114,18 @@ p {
 }
 
 .project-info {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
+
 .project-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.5rem;
+}
+
+.project-card > .icon {
+  font-size: 1.5rem;
 }
 
 #projects-container {
@@ -144,4 +158,28 @@ p {
   flex-direction: column;
   gap: 1rem;
   color: white;
+}
+
+.custom-shape-divider-top-1751055865 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.custom-shape-divider-top-1751055865 svg {
+  position: relative;
+  display: block;
+  width: calc(149% + 1.3px);
+  height: 500px;
+  transform: rotateY(180deg);
+  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+}
+
+.custom-shape-divider-top-1751055865 .shape-fill {
+  fill: #0a94b2;
 }
